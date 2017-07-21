@@ -10,6 +10,6 @@ class DiceTest extends PHPUnit_Framework_TestCase
 	}
 	
 	public function testDiceFace(){
-		$this->assertEquals(6, $this->dice->getFace());	
+		$this->assertEquals(5, $this->dice->getFace());	
 	}	
 }
