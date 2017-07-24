@@ -11,5 +11,10 @@ pipeline {
         echo 'InitMessage'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'for f in /*.php; do phpunit $f;done'
+      }
+    }
   }
 }
