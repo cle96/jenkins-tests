@@ -1,9 +1,14 @@
 pipeline {
-  agent none
+  agent {
+    docker {
+      image 'test'
+    }
+    
+  }
   stages {
-    stage('Validation') {
+    stage('InitMessage') {
       steps {
-        sh 'phpunit --log-junit results/phpunit/phpunit.xml -c phpunit.xml'
+        echo 'InitMessage'
       }
     }
   }
