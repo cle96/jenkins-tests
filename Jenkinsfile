@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'php:latest'
+      image 'php:7.2'
     }
     
   }
@@ -9,11 +9,6 @@ pipeline {
     stage('InitMessage') {
       steps {
         echo 'InitMessage'
-      }
-    }
-    stage('Build') {
-      steps {
-        sh 'for f in /*.php; do phpunit $f;done'
       }
     }
   }
